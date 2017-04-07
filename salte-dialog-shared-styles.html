@@ -21,6 +21,7 @@ Custom property | Description | Default
         min-height: 531px;
         border-radius: 5px;
         overflow: hidden;
+        background: none;
 
         @apply --layout-vertical;
       }
@@ -37,6 +38,8 @@ Custom property | Description | Default
 
       :host ::content > *:not(h2):not(.buttons) {
         margin: 0;
+
+        background: var(--paper-dialog-background-color, --primary-background-color);
 
         @apply --layout-flex;
         @apply --layout-vertical;
