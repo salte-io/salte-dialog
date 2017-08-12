@@ -2,61 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
     <title>salte-dialog demo</title>
 
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../../paper-toggle-button/paper-toggle-button.html">
-    <link rel="import" href="../../neon-animation/animations/scale-up-animation.html">
-    <link rel="import" href="../../neon-animation/animations/fade-out-animation.html">
     <link rel="import" href="../salte-dialog.html">
+    <link rel="import" href="../../paper-toggle-button/paper-toggle-button.html">
+    <link rel="import" href="../../paper-button/paper-button.html">
+    <link rel="import" href="../../neon-animation/web-animations.html">
+    <link rel="import" href="../../neon-animation/neon-animations.html">
 
-    <style is="custom-style" include="demo-pages-shared-styles">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
       :root {
         --salte-dialog-header-background: #673ab7;
       }
-    </style>
+      </style>
+    </custom-style>
   </head>
   <body>
     <div class="vertical-section-container centered">
       <h3>Supports custom headers, content, and buttons</h3>
       <demo-snippet>
-        <template is="dom-bind">
-          <salte-dialog opened="{{opened}}">
-            <h2>My Header</h2>
-            <span>Content</span>
-            <div class="buttons">
-              <paper-button dialog-dismiss>Cancel</paper-button>
-              <paper-button dialog-confirm autofocus>Accept</paper-button>
-            </div>
-          </salte-dialog>
-          <!-- Demo Trigger -->
-          <paper-toggle-button checked="{{opened}}">Opened?</paper-toggle-button>
-        </template>
+        <dom-bind>
+          <template is="dom-bind">
+            <salte-dialog opened="{{opened}}">
+              <h2>My Header</h2>
+              <span>Content</span>
+              <div class="buttons">
+                <paper-button dialog-dismiss>Cancel</paper-button>
+                <paper-button dialog-confirm autofocus>Accept</paper-button>
+              </div>
+            </salte-dialog>
+            <!-- Demo Trigger -->
+            <paper-toggle-button checked="{{opened}}">Opened?</paper-toggle-button>
+          </template>
+        </dom-bind>
       </demo-snippet>
       <h3>All slots are optional!</h3>
       <demo-snippet>
-        <template is="dom-bind">
-          <salte-dialog opened="{{opened}}">
-            <span>Content</span>
-          </salte-dialog>
-          <!-- Demo Trigger -->
-          <paper-toggle-button checked="{{opened}}">Opened?</paper-toggle-button>
-        </template>
+        <dom-bind>
+          <template is="dom-bind">
+            <salte-dialog opened="{{opened}}">
+              <span>Content</span>
+            </salte-dialog>
+            <!-- Demo Trigger -->
+            <paper-toggle-button checked="{{opened}}">Opened?</paper-toggle-button>
+          </template>
+        </dom-bind>
       </demo-snippet>
       <h3>We also support animations!</h3>
       <demo-snippet>
-        <template is="dom-bind">
-          <salte-dialog opened="{{opened}}" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
-            <span>Content</span>
-          </salte-dialog>
-          <!-- Demo Trigger -->
-          <paper-toggle-button checked="{{opened}}">Opened?</paper-toggle-button>
-        </template>
+        <dom-bind>
+          <template is="dom-bind">
+            <salte-dialog opened="{{opened}}" entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+              <span>Content</span>
+            </salte-dialog>
+            <!-- Demo Trigger -->
+            <paper-toggle-button checked="{{opened}}">Opened?</paper-toggle-button>
+          </template>
+        </dom-bind>
       </demo-snippet>
     </div>
   </body>
