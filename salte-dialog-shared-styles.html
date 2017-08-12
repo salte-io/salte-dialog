@@ -26,7 +26,7 @@ Custom property | Description | Default
         @apply --layout-vertical;
       }
 
-      :host ::content h2 {
+      :host ::slotted(h2) {
         flex-shrink: 0;
         margin: 0 !important;
         padding: 14px 24px;
@@ -36,17 +36,17 @@ Custom property | Description | Default
         -webkit-user-select: none;
       }
 
-      :host ::content > *:not(h2):not(.buttons) {
+      :host ::slotted(*:not(h2):not(.buttons)) {
         margin: 0;
 
-        background: var(--paper-dialog-background-color, --primary-background-color);
+        background: var(--paper-dialog-background-color, var(--primary-background-color));
 
         @apply --layout-flex;
         @apply --layout-vertical;
         @apply --salte-dialog-content;
       }
 
-      :host ::content .buttons {
+      :host ::slotted(.buttons) {
         flex-shrink: 0;
         background-color: #fafafa;
         border-top: 1px solid #e0e0e0;
