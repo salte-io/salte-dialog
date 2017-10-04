@@ -50,6 +50,17 @@ Custom property | Description | Default
         Polymer.NeonAnimationRunnerBehavior
       ],
 
+      properties: {
+        /**
+         * The dialog will no longer become full screen on smaller devices
+         */
+        noAutoFullscreen: {
+          type: Boolean,
+          value: false,
+          reflectToAttribute: true
+        }
+      },
+
       listeners: {
         'neon-animation-finish': '_onNeonAnimationFinish'
       },
