@@ -55,7 +55,7 @@ Custom property | Description | Default
       }
 
       @media all and (min-width: 0) and (max-width: 600px) and (orientation: portrait) {
-        :host {
+        :host(:not([no-auto-fullscreen])) {
           position: fixed;
           margin: 0 !important;
           top: 0 !important;
