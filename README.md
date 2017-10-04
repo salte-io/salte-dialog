@@ -1,5 +1,5 @@
 [![Gitter](https://badges.gitter.im/salte-io/salte-dialog.svg)](https://gitter.im/salte-io/salte-dialog?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/salte-io/salte-dialog)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/salte-io/salte-dialog)
 [![Build status](https://travis-ci.org/salte-io/salte-dialog.svg?branch=master)](https://travis-ci.org/salte-io/salte-dialog)
 
 # \<salte-dialog\>
